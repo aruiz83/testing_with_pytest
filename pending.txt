@@ -1,0 +1,9 @@
+def test_employee_tax_calculation():
+    # Crea una instancia de Employee con un salario conocido
+    employee = Employee('John', 'Doe', 30, 60000)
+
+    # Calcula el impuesto esperado (salario * tasa de impuesto)
+    expected_tax = 60000 * Employee.TAX_RATE
+
+    # Compara el impuesto calculado por la propiedad tax con el impuesto esperado
+    assert employee.tax == expected_tax
